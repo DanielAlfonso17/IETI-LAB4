@@ -16,7 +16,7 @@ Debes seguir el Código de honor del ingeniero de sistemas para defender el est�
 
 Clonamos nuestro repositorio con el siguiente comando: 
 ~~~
-git clone https://github.com/DanielAlfonso17/IETI-LAB3.git
+git clone https://github.com/DanielAlfonso17/IETI-LAB4.git
 ~~~
 
 Entramos a nuestra carpeta del proyecto y ejecutamos para instalar todas las dependencias del proyecto
@@ -35,7 +35,7 @@ Veremos la aplicación corriendo en un ambiente local, tambien se dispone de la 
 
 [¡Aplicación desplegada en MicrosoftAzure!](https://almacenamientoieti.z21.web.core.windows.net/)
 
-El inicio de sesión lo estamos manejando con usuario en localstorage el cual es
+El inicio de sesión lo estoy manejando con usuario en localstorage el cual es
 
 
 Username: danielA
