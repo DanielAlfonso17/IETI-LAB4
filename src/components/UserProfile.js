@@ -14,9 +14,9 @@ export default class UserProfile extends React.Component {
     super(props);
     this.state = {
       open: false,
-      nombre: props.user.nombre,
-      apellido: props.user.apellido,
-      correo: props.user.correo
+      nombre: '',
+      apellido: '',
+      correo: ''
     }
     this.handleOpen = this.handleOpen.bind(this);
     this.handleClose = this.handleClose.bind(this);
@@ -62,9 +62,9 @@ export default class UserProfile extends React.Component {
       "apellido": this.state.apellido,
       "correo": this.state.correo
     }
-    this.props.profileUser(user);
-    console.log(user);
+    this.props.profile(user);
     event.preventDefault();
+
   }
 
   render(){

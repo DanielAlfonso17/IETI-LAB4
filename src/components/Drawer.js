@@ -22,6 +22,7 @@ import UserProfile from './UserProfile';
 const drawerWidth = 240;
 
 
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
@@ -66,27 +67,33 @@ function ResponsiveDrawer(props) {
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
+  var usuario = {
+    "nombre": "Daniel",
+    "apellido": "Alfonso",
+    "correo": "danielalfonso.29@hotmai.com"
+  }
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
   const handleProfile = (profile) => {
-    props.user = profile
-
+    usuario = profile;
   }
 
   const drawer = (
-    <div>
+
+    <div>      
       <div className={classes.toolbar} />
       <Divider />
       <List>
-        {[props.user.nombre+ " " + props.user.apellido].map((text, index) => (
+        {[usuario.nombre+ " " + usuario.apellido].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>{<PersonIcon />}</ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
         ))}
-        <p>   {props.user.correo} </p>
+        <p>   {usuario.correo} </p>
       </List>
       <Divider />
       <List>
@@ -99,7 +106,7 @@ function ResponsiveDrawer(props) {
       <List>
         {['Edit Profile'].map((text, index) => (
           <ListItem button key={text}>
-            <UserProfile value={text} profileUser={handleProfile} user={props.user}/>
+            <UserProfile value={text} profile={handleProfile} user={usuario}/>
           </ListItem>
         ))}
       </List>

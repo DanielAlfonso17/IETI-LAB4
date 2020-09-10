@@ -37,11 +37,7 @@ let cardList = [
   	"dueDate" : 1211564}
 ]
 
-const usuario = {
-  "nombre": "Daniel",
-  "apellido": "Alfonso",
-  "correo": "danielalfonso.29@hotmai.com"
-}
+
 
 class App extends React.Component{
 
@@ -51,7 +47,6 @@ class App extends React.Component{
     this.state = {
       isLogginIn: false,
       task: cardList,
-      user: usuario
     }
     this.handleTask = this.handleTask.bind(this);
   }
@@ -75,8 +70,7 @@ class App extends React.Component{
     })
   }
 
-  render(){
-    console.log(this.state.user);
+  render(){    
     return (
           <Router>
 
@@ -90,7 +84,7 @@ class App extends React.Component{
                   {this.state.isLogginIn && (
                     <div>
                       <NewTask newTask={this.handleTask}/>
-                      <ResponsiveDrawer user={this.state.user} profileUser={this.handleProfile}/>
+                      <ResponsiveDrawer profileUser={this.handleProfile}/>
                       <OutlinedCard items={this.state.task}/>
 
                     </div>)}
